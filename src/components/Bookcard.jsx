@@ -2,9 +2,9 @@ import React from "react"
 import "../styles/Bookcard.css"
 import { Link } from "react-router-dom";
 
-const Bookcard = ({ title, publishyear, forfatter, avgRating, bookCover, amazonId }) => {
+const Bookcard = ({ title, publishyear, forfatter, avgRating, bookCover, bookIsbn }) => {
 
-    const isbn = amazonId && amazonId.length > 0 ? amazonId[0] : null;
+    const isbn = bookIsbn && bookIsbn.length > 0 ? bookIsbn[0] : null;
 
     const amazonUrl = `https://www.amazon.com/s?k=${isbn}`
     const bookTitle = title.split('[')[0].trim(); 

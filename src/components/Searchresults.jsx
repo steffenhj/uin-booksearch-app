@@ -15,11 +15,9 @@ export default function Home() {
   }, []); 
 
   const fetchBooks = async (searchQuery) => {
-  
       try {
-          const response = await fetch(`http://openlibrary.org/search.json?q=${searchQuery}`);
+          const response = await fetch(`http://openlibrary.org/search.json?title=${searchQuery}`);
           const data = await response.json();
-  
           setBooks(data.docs);
       } catch (error) {
           console.error('Error getting books', error);
@@ -64,7 +62,7 @@ export default function Home() {
                         forfatter={book.author_name && book.author_name[0]}
                         avgRating={book.ratings_average}
                         bookCover={`http://covers.openlibrary.org/b/olid/${book.cover_edition_key}-M.jpg`} 
-                        amazonId={book.id_amazon}
+                        bookIsbn={book.isbn}
                     />
                 ))}
             </div>

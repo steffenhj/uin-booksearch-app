@@ -9,11 +9,6 @@ body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
-  display: flex;
-}
-
-header {
-  display: flex;
 }
 
 .navbar {
@@ -22,7 +17,6 @@ header {
   align-items: center;
   padding: 5rem 0;
   background-color: rgba(129, 2, 129, 0.89);
-  width: 100%;
 }
 .navbar button {
   padding: 8px 12px;

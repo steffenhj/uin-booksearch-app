@@ -1,0 +1,51 @@
+$color_1: white;
+$background-color_1: #008CBA;
+$background-color_2: #0066ba;
+$background-color_3: #F0F4F3;
+
+.book-card {
+	width: 275px;
+	overflow: hidden;
+	border-radius: 10px;
+	margin: 0 4rem;
+	margin-top: 1rem;
+	&:hover {
+		transform: scale(1.03);
+		box-shadow: 0px 0px 5px 0px;
+	}
+}
+.card-content {
+	padding-left: 1rem;
+	button {
+		background-color: $background-color_1;
+		border: none;
+		color: $color_1;
+		padding: 12px 26px;
+		margin-bottom: 1rem;
+		font-size: 16px;
+		border-radius: 25px;
+		transition: transform 0.3s, background-color 0.3s;
+		&:hover {
+			transform: scale(1.03);
+			background-color: $background-color_2;
+		}
+	}
+}
+.image-container {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	background-color: $background-color_3;
+	border-radius: 10px;
+    padding: 1rem 0;
+	img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+
+		height: 100%;
+		object-fit: cover;
+	}
+}
